@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
-import { Apache2 } from './copyrights/apache2';
+import { Apache2 } from './copyright/licenses/apache2';
+import { Mit } from './copyright/licenses/mit';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed

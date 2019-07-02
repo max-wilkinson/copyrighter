@@ -1,6 +1,6 @@
 'use strict';
 
-import { Copyright } from './copyright';
+import { Copyright } from '../copyright';
 
 export class Apache2 extends Copyright {
   constructor() {
