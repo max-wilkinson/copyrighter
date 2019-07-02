@@ -10,7 +10,11 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.addCopyright"
+    "onCommand:extension.addCopyright",
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:java",
+    "onLanguage:csharp"
   ],
   "main": "./out/extension.js",
   "contributes": {

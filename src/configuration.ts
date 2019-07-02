@@ -7,6 +7,13 @@ function getConfiguration(): vscode.WorkspaceConfiguration {
   return vscode.workspace.getConfiguration('copyrighter');
 }
 
+export const configuredLanguages = new Set([
+  'typescript',
+  'javascript',
+  'java',
+  'csharp'
+]);
+
 export function getAuthor(): string {
   return getConfiguration().get('author') || '';
 }
