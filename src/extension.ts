@@ -1,6 +1,5 @@
 import * as vscode from 'vscode';
-import { Apache2 } from './copyright/licenses/apache2';
-import { Mit } from './copyright/licenses/mit';
+import * as configuration from './configuration';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -34,9 +33,8 @@ export function activate(context: vscode.ExtensionContext) {
 export function deactivate() {}
 
 function insertCopyright(editor: vscode.TextEditor) {
-  var documentStartPosition = new vscode.Position(0, 0);
-
-  const copyright = new Apache2().header();
+  const documentStartPosition = new vscode.Position(0, 0);
+  const copyright = configuration.getCopyright().header();
 
   editor.edit(document => {
     document.insert(documentStartPosition, copyright);

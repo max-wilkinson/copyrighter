@@ -27,6 +27,20 @@
           "type": "string",
           "default": "",
           "description": "The author that holds the copyright."
+        },
+        "copyrighter.license": {
+          "type": "string",
+          "description": "Select a license header to include with your copyright. If no license is selected, then only the copyright will be added to files.",
+          "enumDescriptions": [
+            "Copyright without a license header",
+            "Apache 2.0 License",
+            "MIT License"
+          ],
+          "enum": [
+            "none",
+            "Apache2",
+            "MIT"
+          ]
         }
       }
     }
