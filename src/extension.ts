@@ -2,26 +2,20 @@ import * as vscode from 'vscode';
 import * as copyrightService from './copyright/copyrightService';
 
 // this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-  // Use the console to output diagnostic information (console.log) and errors (console.error)
-  // This line of code will only be executed once when your extension is activated
-  console.log('Congratulations, your extension "copyrighter" is now active!');
-
+  // Perform a copyright check upon extension activation
   copyrightService.handleCopyrightCheck(vscode.window.activeTextEditor);
 
-  // The command has been defined in the package.json file
-  // Now provide the implementation of the command with registerCommand
-  // The commandId parameter must match the command field in package.json
+  // Create command hook for manually adding copyright
   let disposable = vscode.commands.registerCommand(
     'extension.addCopyright',
     () => {
-      // The code you place here will be executed every time your command is executed
       vscode.window.showInformationMessage('Copyright Added');
       copyrightService.handleCopyrightCheck(vscode.window.activeTextEditor);
     }
   );
 
+  // Create listener for automatically handling copyright checks
   vscode.window.onDidChangeActiveTextEditor(
     (editor: vscode.TextEditor | undefined) => {
       copyrightService.handleCopyrightCheck(editor);
