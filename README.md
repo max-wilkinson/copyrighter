@@ -1,65 +1,40 @@
-# copyrighter README
+# Copyrighter
 
-This is the README for your extension "copyrighter". After writing up a brief description, we recommend including the following sections.
+Copyrighter is a VS Code extension that can automatically include your copyright and license (if you have one) in your source code.
+
+## Background
+
+Manually including a copyright and license takes time and cognitive energy away from coding. By automating the process, you are free to focus on doing what you love - building software!
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+When you open a supported file type, Copyrighter will automatically add your copyright notice (and optional license), if they are missing.
 
-For example if there is an image subfolder under your extension project workspace:
+New files will be created with the copyright notice (and optional license) automatically injected at the top of the file.
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+You can utilize the VS Code command "Add Copyright", to manually add your copyright notice to the current file.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+This extension is designed to work right out of the box. No configuration is required in order to get started.
+
+However, there are a couple extension settings (documented below) that you can utilize to enhance the experience.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- `copyrighter.author`: Set the author that holds the copyright
+- `copyrighter.license`: Select a license header to include with your copyright. If no license is selected, then only the copyright will be added to files.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+Copyrighter is in public beta. We are hard at work creating the best experience possible for this extension. If you have any feedback feel free to submit an issue to this repository.
 
-### 1.0.0
+### 0.1
 
-Initial release of ...
+Initial release of Copyrighter
 
-### 1.0.1
+## Contributing
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of conduct when contributing or submitting issues.
