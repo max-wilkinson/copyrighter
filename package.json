@@ -1,7 +1,19 @@
 {
   "name": "copyrighter",
-  "displayName": "copyrighter",
-  "description": "Automates the process of including your copyright in your code.",
+  "displayName": "Copyrighter",
+  "description": "Automates the process of including your copyright and license in your code.",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "copyright",
+    "license",
+    "intellectual property"
+  ],
+  "icon": "./CopyrighterIcon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/max-wilkinson/copyrighter.git"
+  },
+  "preview": true,
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.35.0"
