@@ -32,7 +32,8 @@ export class Copyright {
     let template = `/*
  *   Copyright (c) ${this.year} ${this.author}
  *   All rights reserved.
- */\n`;
+ */
+\n`;
     return template;
   }
 }
