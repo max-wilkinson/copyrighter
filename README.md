@@ -1,3 +1,5 @@
+![hero-image](https://github.com/max-wilkinson/copyrighter/blob/master/CopyrighterHero.png?raw=true)
+
 # Copyrighter
 
 Copyrighter is a VS Code extension that can automatically include your copyright and license (if you have one) in your source code.
