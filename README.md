@@ -33,9 +33,15 @@ This extension contributes the following settings:
 
 Copyrighter is in public beta. We are hard at work creating the best experience possible for this extension. If you have any feedback feel free to submit an issue to this repository.
 
-### 0.1
+### 0.0.1
 
 Initial release of Copyrighter
+
+### 0.0.2
+
+Added language support for C, C++, GO, and Rust
+
+Added support for GPL 3.0 License
 
 ## Contributing
 
