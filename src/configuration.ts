@@ -25,10 +25,14 @@ function getConfiguration(): vscode.WorkspaceConfiguration {
 }
 
 export const configuredLanguages = new Set([
-  'typescript',
-  'javascript',
+  'c',
+  'cpp',
+  'csharp',
+  'go',
   'java',
-  'csharp'
+  'javascript',
+  'rust',
+  'typescript'
 ]);
 
 export function getAuthor(): string {

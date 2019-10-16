@@ -28,10 +28,14 @@
   ],
   "activationEvents": [
     "onCommand:extension.addCopyright",
-    "onLanguage:typescript",
-    "onLanguage:javascript",
+    "onLanguage:c",
+    "onLanguage:cpp",
+    "onLanguage:csharp",
+    "onLanguage:go",
     "onLanguage:java",
-    "onLanguage:csharp"
+    "onLanguage:javascript",
+    "onLanguage:rust",
+    "onLanguage:typescript"
   ],
   "main": "./out/extension.js",
   "contributes": {
