@@ -9,6 +9,10 @@
     "intellectual property"
   ],
   "icon": "CopyrighterIcon.png",
+  "galleryBanner": {
+    "color": "#3C3B6E",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/max-wilkinson/copyrighter.git"
