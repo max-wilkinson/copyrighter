@@ -59,12 +59,14 @@
           "enumDescriptions": [
             "Copyright without a license header",
             "Apache 2.0 License",
-            "MIT License"
+            "MIT License",
+            "GPL 3.0 License"
           ],
           "enum": [
             "none",
             "Apache2",
-            "MIT"
+            "MIT",
+            "GPL3"
           ]
         }
       }

@@ -19,6 +19,7 @@ import * as vscode from 'vscode';
 import { Copyright } from './copyright/copyright';
 import { Apache2 } from './copyright/licenses/apache2';
 import { Mit } from './copyright/licenses/mit';
+import { Gpl } from './copyright/licenses/gpl3';
 
 function getConfiguration(): vscode.WorkspaceConfiguration {
   return vscode.workspace.getConfiguration('copyrighter');
@@ -46,6 +47,8 @@ export function getCopyright(): Copyright {
     return new Apache2();
   } else if (selectedLicense === 'MIT') {
     return new Mit();
+  } else if (selectedLicense === 'GPL3') {
+    return new Gpl();
   } else {
     return new Copyright();
   }
