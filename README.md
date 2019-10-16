@@ -1,4 +1,4 @@
-![hero-image](https://github.com/max-wilkinson/copyrighter/blob/master/CopyrighterHero.png?raw=true)
+![Writes your copyright so you don't have to](https://github.com/max-wilkinson/copyrighter/blob/master/CopyrighterHero.png?raw=true)
 
 # Copyrighter
 
