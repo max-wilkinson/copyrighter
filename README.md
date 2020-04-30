@@ -43,6 +43,10 @@ Added language support for C, C++, GO, and Rust
 
 Added support for GPL 3.0 License
 
+### 0.0.3
+
+Added support for custom note on default copyright header notice
+
 ## Contributing
 
 Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of conduct when contributing or submitting issues.
