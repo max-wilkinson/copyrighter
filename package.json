@@ -68,6 +68,11 @@
             "MIT",
             "GPL3"
           ]
+        },
+        "copyrighter.note": {
+          "type": "string",
+          "default": "",
+          "description": "An optional note that can appear at the end of the default copyright notice."
         }
       }
     }

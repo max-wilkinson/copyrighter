@@ -33,7 +33,7 @@ export const configuredLanguages = new Set([
   'java',
   'javascript',
   'rust',
-  'typescript'
+  'typescript',
 ]);
 
 export function getAuthor(): string {
@@ -52,4 +52,8 @@ export function getCopyright(): Copyright {
   } else {
     return new Copyright();
   }
+}
+
+export function getNote(): string {
+  return getConfiguration().get('note') || '';
 }
