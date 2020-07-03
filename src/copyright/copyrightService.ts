@@ -22,7 +22,7 @@ export function handleCopyrightCheck(editor: vscode.TextEditor | undefined) {
   if (
     editor !== undefined &&
     isSupportedLanguage(editor.document.languageId) &&
-    !hasCopyright(editor.document)
+    !hasCopyright(editor.document) && (configuration.getNewFilesOnly() ? isNewDocument(editor.document) : true)
   ) {
     insertCopyright(editor);
   }

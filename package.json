@@ -73,6 +73,11 @@
           "type": "string",
           "default": "",
           "description": "An optional note that can appear at the end of the default copyright notice."
+        },
+        "copyrighter.newFilesOnly": {
+          "type": "boolean",
+          "default": false,
+          "description": "Inject Copyright notice in new files only"
         }
       }
     }

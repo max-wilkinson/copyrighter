@@ -57,3 +57,7 @@ export function getCopyright(): Copyright {
 export function getNote(): string {
   return getConfiguration().get('note') || '';
 }
+
+export function getNewFilesOnly(): Boolean {
+  return getConfiguration().get('newFilesOnly') || false;
+}
