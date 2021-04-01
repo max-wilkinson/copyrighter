@@ -31,12 +31,19 @@
     "onLanguage:c",
     "onLanguage:cpp",
     "onLanguage:csharp",
+    "onLanguage:css",
     "onLanguage:go",
     "onLanguage:java",
     "onLanguage:javascript",
+    "onLanguage:objective-c",
     "onLanguage:rust",
+    "onLanguage:scss",
+    "onLanguage:swift",
+    "onLanguage:sql",
     "onLanguage:typescript",
-    "onLanguage:swift"
+    "onLanguage:typescriptreact",
+    "onLanguage:vue"
+    
   ],
   "main": "./out/extension.js",
   "contributes": {

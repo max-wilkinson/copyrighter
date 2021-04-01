@@ -33,9 +33,14 @@ export const configuredLanguages = new Set([
   'go',
   'java',
   'javascript',
+  'objective-c',
   'rust',
+  'scss',
   'swift',
+  'sql',
   'typescript',
+  'typescriptreact',
+  'vue'
 ]);
 
 export function getAuthor(): string {
