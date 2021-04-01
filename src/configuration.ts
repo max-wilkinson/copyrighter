@@ -35,7 +35,6 @@ export const configuredLanguages = new Set([
   'rust',
   'typescript',
   'css',
-  'html',
 ]);
 
 export function getAuthor(): string {
