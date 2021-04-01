@@ -29,12 +29,13 @@ export const configuredLanguages = new Set([
   'c',
   'cpp',
   'csharp',
+  'css',
   'go',
   'java',
   'javascript',
   'rust',
+  'swift',
   'typescript',
-  'css',
 ]);
 
 export function getAuthor(): string {
