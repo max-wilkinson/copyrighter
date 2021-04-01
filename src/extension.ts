@@ -27,8 +27,12 @@ export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     'extension.addCopyright',
     () => {
-      vscode.window.showInformationMessage('Copyright Added');
-      copyrightService.handleCopyrightCheck(vscode.window.activeTextEditor);
+      const copyrightAdded = copyrightService.handleCopyrightCheck(vscode.window.activeTextEditor);
+      if (copyrightAdded) {
+        vscode.window.showInformationMessage('Copyright Added');
+      } else {
+        vscode.window.showInformationMessage('Copyright could not be added to this file.');
+      }
     }
   );
 
