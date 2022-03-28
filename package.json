@@ -43,7 +43,6 @@
     "onLanguage:typescript",
     "onLanguage:typescriptreact",
     "onLanguage:vue"
-    
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -100,7 +99,6 @@
   "devDependencies": {
     "@types/mocha": "^2.2.42",
     "@types/node": "^10.12.21",
-    "@types/vscode": "^1.55.0",
     "tslint": "^5.12.1",
     "typescript": "^3.3.1",
     "vscode": "^1.1.37",
