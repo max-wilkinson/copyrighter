@@ -18,6 +18,7 @@
 'use script';
 
 import * as configuration from '../configuration';
+import * as comment from './comment';
 
 export class Copyright {
   protected author: string;
@@ -30,16 +31,33 @@ export class Copyright {
     this.note = configuration.getNote();
   }
 
-  public header(): string {
-    let template = `/*
- *   Copyright (c) ${this.year} ${this.author}
- *   All rights reserved.\n`;
+  public header(style: comment.CommentStyle): string {
+    let beginningPrefix, midPrefix, endPrefix;
 
-    if (this.note) {
-      template += ` *   ${this.note}\n`;
+    switch (style) {
+      case comment.CommentStyle.CStyle:
+      default:
+        beginningPrefix = '/*';
+        midPrefix = ' *'
+        endPrefix = ' */'
+        break;
+
+      case comment.CommentStyle.Hashtag:
+        beginningPrefix = '#';
+        midPrefix = '#'
+        endPrefix = '#'
+        break;
     }
 
-    template += ` */\n`;
+    let template = `${beginningPrefix}
+${midPrefix}   Copyright (c) ${this.year} ${this.author}
+${midPrefix}   All rights reserved.\n`;
+
+    if (this.note) {
+      template += `${midPrefix}   ${this.note}\n`;
+    }
+
+    template += `${endPrefix}\n`;
 
     return template;
   }

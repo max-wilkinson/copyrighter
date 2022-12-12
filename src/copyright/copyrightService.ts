@@ -17,6 +17,7 @@
 
 import * as vscode from 'vscode';
 import * as configuration from '../configuration';
+import * as comment from './comment';
 
 export function handleCopyrightCheck(editor: vscode.TextEditor | undefined) {
   if (
@@ -55,7 +56,7 @@ function hasCopyright(document: vscode.TextDocument): Boolean {
 
 function insertCopyright(editor: vscode.TextEditor) {
   const documentStartPosition = new vscode.Position(0, 0);
-  const copyright = configuration.getCopyright().header();
+  const copyright = configuration.getCopyright().header(getCommentStyle(editor.document.languageId));
 
   editor.edit(document => {
     document.insert(documentStartPosition, copyright);
@@ -68,4 +69,16 @@ function isNewDocument(document: vscode.TextDocument): Boolean {
 
 function isSupportedLanguage(languageId: string): Boolean {
   return configuration.configuredLanguages.has(languageId);
+}
+
+function getCommentStyle(languageId: string): comment.CommentStyle {
+  if (configuration.cstyleLanguages.has(languageId)) {
+    return comment.CommentStyle.CStyle;
+  }
+  if (configuration.hashtagLanguages.has(languageId)) {
+    return comment.CommentStyle.Hashtag;
+  }
+
+  // default to C-style (this shouldn't be reached anyway!)
+  return comment.CommentStyle.CStyle;
 }

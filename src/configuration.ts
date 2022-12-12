@@ -25,7 +25,8 @@ function getConfiguration(): vscode.WorkspaceConfiguration {
   return vscode.workspace.getConfiguration('copyrighter');
 }
 
-export const configuredLanguages = new Set([
+// comment styles '/* */' or '//'
+export const cstyleLanguages = new Set([
   'c',
   'cpp',
   'csharp',
@@ -41,6 +42,17 @@ export const configuredLanguages = new Set([
   'typescript',
   'typescriptreact',
   'vue'
+]);
+
+// comments use '#'
+export const hashtagLanguages = new Set([
+  'python',
+  'shellscript'
+]);
+
+export const configuredLanguages = new Set([
+  ...cstyleLanguages,
+  ...hashtagLanguages
 ]);
 
 export function getAuthor(): string {
