@@ -32,7 +32,9 @@ export class Copyright {
   }
 
   public header(style: comment.CommentStyle): string {
-    let beginningPrefix, midPrefix, endPrefix;
+    let beginningPrefix: String;
+    let midPrefix: String;
+    let endPrefix: String;
 
     switch (style) {
       case comment.CommentStyle.CStyle:
@@ -54,7 +56,9 @@ ${midPrefix}   Copyright (c) ${this.year} ${this.author}
 ${midPrefix}   All rights reserved.\n`;
 
     if (this.note) {
-      template += `${midPrefix}   ${this.note}\n`;
+      this.note.split('\n').forEach((line: String) => {
+        template += `${midPrefix}   ${line}\n`;
+      });
     }
 
     template += `${endPrefix}\n`;
