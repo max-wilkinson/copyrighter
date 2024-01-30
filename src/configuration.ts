@@ -38,8 +38,10 @@ export const configuredLanguages = new Set([
   'scss',
   'swift',
   'sql',
+  'systemverilog',
   'typescript',
   'typescriptreact',
+  'verilog',
   'vue'
 ]);
 

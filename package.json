@@ -40,8 +40,10 @@
     "onLanguage:scss",
     "onLanguage:swift",
     "onLanguage:sql",
+    "onLanguage:systemverilog",
     "onLanguage:typescript",
     "onLanguage:typescriptreact",
+    "onLanguage:verilog",
     "onLanguage:vue"
   ],
   "main": "./out/extension.js",
@@ -52,6 +54,32 @@
         "title": "Add Copyright"
       }
     ],
+    "languages": [
+      {
+        "id": "systemverilog",
+        "aliases": [
+            "SystemVerilog",
+            "systemverilog",
+            "System Verilog",
+            "Systemverilog"
+        ],
+        "extensions": [
+            ".sv",
+            ".svh"
+        ]
+      },
+      {
+        "id": "verilog",
+        "aliases": [
+            "Verilog",
+            "verilog"
+        ],
+        "extensions": [
+            ".v",
+            ".vh"
+        ]
+    }
+  ],
     "configuration": {
       "title": "Copyrighter",
       "properties": {
